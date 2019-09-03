@@ -1,0 +1,7 @@
+
+<ul>
+<% @appointments.each do |a| %>
+<li><%=a.to_readable%> - <%= link_to a.patient.name, patient_path(a.patient) %></li>
+
+<% end %>
+</ul>
