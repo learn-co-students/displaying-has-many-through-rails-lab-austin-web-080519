@@ -1,0 +1,5 @@
+<% @doctors.each do |doc| %>
+ <%= link_to doc.name, doctor_path(doc) %>
+ <%= ActionController::Base.helpers.pluralize(doc.patients.count, "patient") %>
+ <br>
+<% end %>
