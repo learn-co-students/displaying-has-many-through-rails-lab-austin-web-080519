@@ -50,6 +50,7 @@ describe "patients", type:  :feature do
 
     it "links to the doctor's show page by name for the doctor of each appointment" do
       visit patient_path(@bart)
+      # binding.pry
       expect(page).to have_link("Meredith Grey", href: doctor_path(@meredith))
     end
   end
