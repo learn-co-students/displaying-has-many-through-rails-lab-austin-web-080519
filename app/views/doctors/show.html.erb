@@ -4,15 +4,9 @@ and appointments, with each appointment's date, time, and patient name
 
 <h1>Name: <%= @doctor.name %></h1>
 <h3>Department: <%= @doctor.department %> </h3>
-<br>
 <h3>Appointments: </h3> <br>
 
 <%= @doctor.appointments.each do |apt| %>
-    <%= "#{app.appointment_datetime.strftime("%B %d, %Y")} at #{app.appointment_datetime.strftime("%R")}" %> <br>
+    <%= "#{apt.appointment_datetime.strftime("%B %d, %Y")} at #{apt.appointment_datetime.strftime("%R")}" %> <br>
     <%= link_to apt.patient.name, patient_path(apt.patient) %> <br>
 <% end %>
-
-
- <%# <%= "#{app.appointment_datetime.strftime("%B %d, %Y")} at #{app.appointment_datetime.strftime("%R")}" %>
-
-
