@@ -1,0 +1,5 @@
+<%@patient.appointments.each do |appointment|%>
+<%a = appointment.appointment_datetime.to_formatted_s(:long) %>
+<%= a[0..-7] + " at " + a[-5..-1]%>
+<%= link_to appointment.doctor.name, doctor_path(appointment.doctor)%>
+<%end%>
