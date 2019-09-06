@@ -1,0 +1,9 @@
+<h1> Doctor Information Page</h1>
+<p>
+Name: <%= @doctor.name %>
+Department: <%= @doctor.department%>
+<% %>
+Appointments: <% @doctor.appointment_times.each do |a| %>
+<%= a.%>
+Patients: <%= @doctor.patient%>
+</p>
